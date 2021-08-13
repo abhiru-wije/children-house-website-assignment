@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layout.css">
+    <script src="https://kit.fontawesome.com/4f128951c5.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container flex flex-col">
+        <div class="header">
+            <p class="ml-10"> SAMADHI CHILDREN HOME</p>
+        </div>
+        <div class="dashboard flex flex-row ">
+            <div class="left" style="overflow-y: scroll;">
+                <div class="space"></div>
+                <div class="space">
+                    <img class="icon" src="./overview.png" alt="">
+                    <span class="text-gray">Dashboard</span>
+                </div>
+                <div id="donation" class="space pointer">
+                    <img class="icon" src="./money.png" alt="">
+                    <span class="text-gray">Donations<i class="fas fa-caret-down pl-10 "></i></span>
+                    
+                </div>
+                <div id="donationMenu" class="space dropdown text-gray menuItem">
+                    <span >Add Donations</span>
+                    <p>View Donations</p>
+                </div>
+                <div id="staff" class="space pointer">
+                    <img class="icon" src="./users.png" alt="">
+                    <span class="text-gray">Staff <i class="fas fa-caret-down pl-10 "></i></span>
+                </div>
+                <div id="staffMenu" class="space dropdown text-gray menuItem">
+                    <span>Add Staff</span>
+                    <p>View Staff</p>
+                </div>
+                <div id="child" class="space pointer">
+                    <img class="icon" src="./child.png" alt="">
+                    <span class="text-gray">Child <i class="fas fa-caret-down pl-10 "></i></span>
+                </div>
+                <div id="childMenu" class="space dropdown text-gray menuItem">
+                    <span>Add Child</span>
+                    <p>View Child</p>
+                </div>
+                <div id="labour" class="space pointer">
+                    <img class="icon" src="./labour.png" alt="">
+                    <span class="text-gray">Labour <i class="fas fa-caret-down pl-10 "></i></span>
+                </div>
+                <div id="labourMenu" class="space dropdown text-gray menuItem">
+                    <span>Add Labours</span>
+                    <p>View Labours</p>
+                    <p>View Labour Salary</p>
+                </div>
+                <div class="space">
+                    <img class="icon" src="./overview.png" alt="">
+                    <span class="text-gray">Logout</span>
+                </div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var donationDrop = false;
+        
+        var staffDrop = false;
+       
+        var childDrop = false;
+        
+        var labourDrop = false;
+        Functionality('donation', donationDrop);
+        Functionality('staff', staffDrop);
+        Functionality('child', childDrop);
+        Functionality('labour', labourDrop);
+
+        function Functionality(element,state){
+            document.getElementById(element).addEventListener('click',()=>{
+            if(!state){
+                document.getElementById(element+"Menu").style.display = 'block';
+                state = true;
+            }else{
+                document.getElementById(element+"Menu").style.display = 'none';
+                state = false;
+            }
+            
+        });
+        }
+
+       
+    </script>
+</body>
+</html>
