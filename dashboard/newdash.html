@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -177,10 +178,78 @@
             </div>
           </div>
         </div>
-        <div class="donate-table"></div>
-        <div class="chart-container"></div>
+        <div class="donate-table">
+          <div class="table-header">
+            <h2>Cash Donation Details</h2>
+          </div>
+          <div class="table">
+            <table style="width: 100%">
+              <tr>
+                <th>Donar Name</th>
+                <th>Fund Amount</th>
+                <th>Contact Number</th>
+                <th>Date</th>
+              </tr>
+              <tr>
+                <td>Abhiru</td>
+                <td>1500</td>
+                <td>0714820364</td>
+                <td>2020-02-04</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
     </div>
     <script src="newjs.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.5)",
+                "rgba(54, 162, 235, 0.5)",
+                "rgba(255, 206, 86, 0.5)",
+                "rgba(75, 192, 192, 0.5)",
+                "rgba(153, 102, 255, 0.5)",
+                "rgba(255, 159, 64, 0.5)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+          Plugins: {
+            legend: {
+              maxHeight: 1000,
+              maxWidth: 1000,
+            },
+          },
+          responsive: true,
+        },
+      });
+    </script>
   </body>
 </html>
