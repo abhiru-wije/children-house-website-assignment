@@ -19,12 +19,12 @@
         </div>
       </div>
       <div class="wrapper">
-        <form action="./includes/login-inc.php" method = "post">
+        <form action="./includes/login-inc.php" method = "POST">
             <div class="username">
-                <input type="text" name="" id="" placeholder="Username" />
+                <input type="text" name="username" id="" placeholder="Username" />
             </div>
             <div class="password">
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" name="password"/>
             </div>
             <div class="tic-box">
                 <input type="checkbox" name="" id="" />
@@ -42,3 +42,9 @@
     </div>
   </body>
 </html>
+
+
+
+
+
+
