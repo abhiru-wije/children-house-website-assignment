@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  background-color: #222222;
+}
+.header {
+  height: 8%;
+  width: 100vw;
+  background-color: #1a1818;
+  color: #9c9c9c;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.dashboard {
+  background-color: #222222;
+  height: 92%;
+}
+.left {
+  background-color: #222222;
+  width: 15%;
+  scrollbar-width: none;
+  color: #9c9c9c;
+}
+.right {
+  background-color: white;
+  width: 85%;
+}
+.space {
+  height: 10%;
+  background-color: #222222;
+}
+.space p:hover,
+.space span:hover {
+  color: wheat;
+  cursor: pointer;
+}
+#labourMenu {
+  height: 15%;
+}
+#labour {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#labour .icon {
+  height: 30px;
+  width: 20px;
+  margin-left: 11%;
+}
+#child .icon {
+  height: 35px;
+  width: 25px;
+  margin-left: 11%;
+}
+.icon {
+  width: 32px;
+  margin-left: 10%;
+  margin-right: 5%;
+  transform: translateY(10px);
+}
+.text-gray {
+  color: #9c9c9c;
+}
+
+.pl-10 {
+  padding-left: 10px;
+  transform: translateY(2px);
+}
+.dropdown {
+  display: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.menuItem {
+  padding-left: 20%;
+}
